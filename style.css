@@ -791,7 +791,28 @@ a {
   }
 
   .benefits-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 22px 18px 24px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .benefit-card p {
+    font-size: 1rem;
+  }
+
+  .benefit-card.mode-green::after,
+  .benefit-card.mode-orange::after,
+  .benefit-card.mode-pink::after,
+  .benefit-card.mode-blue::after {
+    font-size: 5.2rem;
+    top: 18px;
+    right: -6px;
   }
 
   .modes-grid {
