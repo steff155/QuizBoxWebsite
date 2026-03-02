@@ -1,59 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>QuizBox – the free quiz app</title>
+    <title>QuizBox – la app de quiz gratuita</title>
     <meta
       name="description"
-      content="Exciting multiplayer rounds, daily leagues, tournaments and marathon runs. Perfect for a quick break."
+      content="Partidas multijugador emocionantes, ligas diarias, torneos y maratones. Perfecta para ratos cortos."
     />
-    <link rel="alternate" hreflang="en" href="index.html" />
-    <link rel="alternate" hreflang="de" href="de/index.html" />
-    <link rel="alternate" hreflang="es" href="es/index.html" />
-    <link rel="alternate" hreflang="x-default" href="index.html" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="alternate" hreflang="en" href="../index.html" />
+    <link rel="alternate" hreflang="de" href="../de/index.html" />
+    <link rel="alternate" hreflang="es" href="index.html" />
+    <link rel="alternate" hreflang="x-default" href="../index.html" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script>
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        if (params.has("lang")) return;
-        var lang = (navigator.language || "").toLowerCase();
-        if (lang.startsWith("de")) {
-          window.location.replace("de/index.html");
-        } else if (lang.startsWith("es")) {
-          window.location.replace("es/index.html");
-        }
-      })();
-    </script>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <!-- ─── HEADER ──────────────────────────────────── -->
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="QuizBox – home">
+        <a class="brand" href="#top" aria-label="QuizBox – inicio">
           <img
-            src="assets/QuizBoxLogo_lang.png"
+            src="../assets/QuizBoxLogo_lang.png"
             alt="QuizBox"
             class="brand-logo"
           />
         </a>
-        <nav class="lang-switch" aria-label="Language selector">
+        <nav class="lang-switch" aria-label="Selector de idioma">
           <details class="lang-dropdown">
             <summary class="lang-current">
-              <span>EN</span>
+              <span>ES</span>
             </summary>
             <div class="lang-menu">
-              <a class="lang-link is-active" href="index.html?lang=en">EN</a>
-              <a class="lang-link" href="de/index.html?lang=de">DE</a>
-              <a class="lang-link" href="es/index.html?lang=es">ES</a>
+              <a class="lang-link" href="../index.html?lang=en">EN</a>
+              <a class="lang-link" href="../de/index.html?lang=de">DE</a>
+              <a class="lang-link is-active" href="index.html?lang=es">ES</a>
             </div>
           </details>
         </nav>
@@ -65,11 +53,11 @@
       <section class="hero" aria-labelledby="hero-headline">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <h1 id="hero-headline">QuizBox – the free quiz app</h1>
+            <h1 id="hero-headline">QuizBox – la app de quiz gratuita</h1>
             <div class="store-row">
               <a class="store-badge" href="#download" aria-label="App Store">
                 <img
-                  src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+                  src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
                   alt="Download on the App Store"
                 />
               </a>
@@ -79,15 +67,15 @@
                 aria-label="Google Play"
               >
                 <img
-                  src="assets/GetItOnGooglePlay_Badge_Web_color_English.svg"
+                  src="../assets/GetItOnGooglePlay_Badge_Web_color_English.svg"
                   alt="Get it on Google Play"
                 />
               </a>
             </div>
-            <p class="hero-tagline">Download for free now</p>
+            <p class="hero-tagline">Descárgala gratis ahora</p>
           </div>
           <div class="hero-media" aria-hidden="true">
-            <img src="assets/hero.png" alt="QuizBox gameplay preview" />
+            <img src="../assets/hero.png" alt="Vista previa del juego" />
           </div>
         </div>
       </section>
@@ -97,35 +85,34 @@
         <div class="container">
           <div class="section-header">
             <h2 id="features-heading">
-              Four exciting game modes – on your own or head‑to‑head
+              Cuatro modos de juego emocionantes — en solitario o en duelo
             </h2>
             <p>
-              Exciting multiplayer rounds, daily leagues, tournaments and
-              marathon runs. Perfect for a quick break.
+              Partidas multijugador emocionantes, ligas diarias, torneos y
+              maratones. Perfecta para ratos cortos.
             </p>
           </div>
           <ul class="benefits-grid" role="list">
             <li class="benefit-card mode-green" data-icon="👥">
-              <h3>Multiplayer Duels</h3>
-              <p>Find a quick match or challenge friends directly.</p>
+              <h3>Duelos multijugador</h3>
+              <p>Encuentra una partida rápida o reta a tus amigos.</p>
             </li>
             <li class="benefit-card mode-orange" data-icon="🏅">
-              <h3>Daily League</h3>
+              <h3>Liga diaria</h3>
               <p>
-                9 questions every day, 7‑day week, promotion and relegation in
-                the group ranking.
+                9 preguntas cada día, 7 días a la semana, ascensos y descensos en
+                el ranking del grupo.
               </p>
             </li>
             <li class="benefit-card mode-pink" data-icon="🏆">
-              <h3>Tournaments</h3>
+              <h3>Torneos</h3>
               <p>
-                Bronze, silver or gold – 2 to 4 KO rounds against multiple
-                players.
+                Bronce, plata u oro: 2 a 4 rondas KO contra varios jugadores.
               </p>
             </li>
             <li class="benefit-card mode-blue" data-icon="♾️">
-              <h3>Marathon Mode</h3>
-              <p>Endless run with rewards, badges and revives.</p>
+              <h3>Modo maratón</h3>
+              <p>Modo infinito con recompensas, insignias y revivir.</p>
             </li>
           </ul>
         </div>
@@ -136,18 +123,18 @@
     <!-- ─── FOOTER ───────────────────────────────────────── -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand" href="#top" aria-label="QuizBox – back to top">
+        <a class="brand" href="#top" aria-label="QuizBox – arriba">
           <img
-            src="assets/QuizBoxLogo_lang.png"
+            src="../assets/QuizBoxLogo_lang.png"
             alt="QuizBox"
             class="brand-logo brand-logo-footer"
           />
         </a>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="impressum.html">Imprint</a>
-          <a href="privacy.html">Privacy</a>
+        <nav class="footer-nav" aria-label="Navegación del pie">
+          <a href="../impressum.html">Aviso legal</a>
+          <a href="../privacy.html">Privacidad</a>
         </nav>
-        <p class="footer-note">© 2026 QuizBox. All rights reserved.</p>
+        <p class="footer-note">© 2026 QuizBox. Todos los derechos reservados.</p>
       </div>
     </footer>
   </body>
