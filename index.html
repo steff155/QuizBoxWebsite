@@ -29,12 +29,6 @@
             class="brand-logo"
           />
         </a>
-        <nav class="nav" aria-label="Hauptnavigation">
-          <a href="#features">Features</a>
-          <a href="#modes">Spielmodi</a>
-          <a href="#how">So funktioniert's</a>
-          <a href="#download" class="nav-cta">Download</a>
-        </nav>
       </div>
     </header>
 
@@ -43,26 +37,26 @@
       <section class="hero" aria-labelledby="hero-headline">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Kostenlos spielen</span>
-            <h1 id="hero-headline">QuizBox –<br />das mobile Quiz‑Duell</h1>
-            <p class="hero-sub">
-              Schnelle Multiplayer‑Runden, tägliche Ligen, Turniere und
-              Marathon‑Runs. Perfekt für die kurze Pause oder den langen Abend.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#download">Kostenlos starten</a>
-              <a class="btn btn-ghost" href="#modes">Gameplay ansehen</a>
-            </div>
+            <h1 id="hero-headline">QuizBox – die kostenlose Quiz‑App</h1>
             <div class="store-row">
-              <a class="store-btn" href="#download">
-                <span class="store-icon">&#63743;</span>
-                <span><small>Laden im</small> App Store</span>
+              <a class="store-badge" href="#download" aria-label="Im App Store">
+                <img
+                  src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+                  alt="Download on the App Store"
+                />
               </a>
-              <a class="store-btn" href="#download">
-                <span class="store-icon store-icon-gp">&#9654;</span>
-                <span><small>Jetzt bei</small> Google Play</span>
+              <a
+                class="store-badge"
+                href="#download"
+                aria-label="Bei Google Play"
+              >
+                <img
+                  src="assets/GetItOnGooglePlay_Badge_Web_color_English.svg"
+                  alt="Get it on Google Play"
+                />
               </a>
             </div>
+            <p class="hero-tagline">Jetzt kostenlos downloaden</p>
           </div>
           <div class="hero-media" aria-hidden="true">
             <img src="assets/hero.png" alt="QuizBox – Gameplay-Vorschau" />
@@ -74,256 +68,41 @@
       <section class="section" id="features" aria-labelledby="features-heading">
         <div class="container">
           <div class="section-header">
-            <span class="tag">Features</span>
             <h2 id="features-heading">
-              Alles drin, was ein gutes Quiz braucht
+              Vier spannende Spielmodi – ob allein oder im Duell
             </h2>
             <p>
-              Fünf Spielmodi, täglich neue Herausforderungen und echte
-              Konkurrenz – ob allein oder im Duell.
+              Spannende Multiplayer‑Runden, tägliche Ligen, Turniere und
+              Marathon‑Runs. Perfekt für Zwischendurch.
             </p>
           </div>
           <ul class="benefits-grid" role="list">
-            <li class="benefit-card">
-              <span class="card-icon">⚔️</span>
+            <li class="benefit-card mode-green" data-icon="👥">
               <h3>Mehrspieler‑Duelle</h3>
               <p>Quick Match finden oder Freunde direkt herausfordern.</p>
             </li>
-            <li class="benefit-card">
-              <span class="card-icon">🏆</span>
+            <li class="benefit-card mode-orange" data-icon="🏅">
               <h3>Tägliche Liga</h3>
               <p>
                 Jeden Tag 9 Fragen, 7‑Tage‑Woche, Auf‑ und Abstieg im
                 Gruppenranking.
               </p>
             </li>
-            <li class="benefit-card">
-              <span class="card-icon">🥇</span>
+            <li class="benefit-card mode-pink" data-icon="🏆">
               <h3>Turniere</h3>
               <p>
                 Bronze, Silber oder Gold – 2 bis 4 KO‑Runden gegen mehrere
                 Spieler.
               </p>
             </li>
-            <li class="benefit-card">
-              <span class="card-icon">🔁</span>
+            <li class="benefit-card mode-blue" data-icon="♾️">
               <h3>Marathon‑Mode</h3>
               <p>Endlos‑Run mit Belohnungen, Badges und Revives.</p>
-            </li>
-            <li class="benefit-card">
-              <span class="card-icon">📊</span>
-              <h3>Statistiken & Ranglisten</h3>
-              <p>Ergebnisse, Punkte und Fortschritt auf einen Blick.</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- ─── SPIELMODI ────────────────────────────────────── -->
-      <section
-        class="section section-alt"
-        id="modes"
-        aria-labelledby="modes-heading"
-      >
-        <div class="container">
-          <div class="section-header">
-            <span class="tag">Spielmodi</span>
-            <h2 id="modes-heading">Wähle deinen Modus</h2>
-            <p>
-              Von schnellen Duellen bis zum Endlos‑Run – für jeden Moment der
-              richtige Modus.
-            </p>
-          </div>
-          <div class="modes-grid">
-            <article class="mode-card">
-              <header class="mode-card-header">
-                <span class="mode-icon">⚡</span>
-                <h3>Quick Match</h3>
-              </header>
-              <p>
-                6 Runden, 3 Fragen pro Runde (18 gesamt) gegen zufällige Gegner.
-              </p>
-              <ul class="mode-tags">
-                <li>18 Fragen</li>
-                <li>Zufallsgegner</li>
-                <li>Schnell</li>
-              </ul>
-            </article>
-            <article class="mode-card">
-              <header class="mode-card-header">
-                <span class="mode-icon">👥</span>
-                <h3>Freunde</h3>
-              </header>
-              <p>
-                Duelle gegen Freunde mit gleicher Rundenstruktur wie Quick
-                Match.
-              </p>
-              <ul class="mode-tags">
-                <li>18 Fragen</li>
-                <li>Freunde einladen</li>
-              </ul>
-            </article>
-            <article class="mode-card">
-              <header class="mode-card-header">
-                <span class="mode-icon">🥊</span>
-                <h3>Turnier</h3>
-              </header>
-              <p>Mehrspieler‑Wettbewerb mit 2–4 Runden je nach Turnierlevel.</p>
-              <ul class="mode-tags">
-                <li>Bronze – Gold</li>
-                <li>KO‑System</li>
-                <li>Mehrere Spieler</li>
-              </ul>
-            </article>
-            <article class="mode-card mode-card-accent">
-              <header class="mode-card-header">
-                <span class="mode-icon">📅</span>
-                <h3>Liga</h3>
-              </header>
-              <p>Tägliche Runs mit Gruppenplatz und Wochen‑Ranking.</p>
-              <ul class="mode-tags">
-                <li>9 Fragen täglich</li>
-                <li>7 Tage</li>
-                <li>Auf‑ & Abstieg</li>
-              </ul>
-            </article>
-            <article class="mode-card mode-card-accent">
-              <header class="mode-card-header">
-                <span class="mode-icon">♾️</span>
-                <h3>Marathon</h3>
-              </header>
-              <p>Endlos‑Quiz mit Lives, Revives und Badge‑Fortschritt.</p>
-              <ul class="mode-tags">
-                <li>Endlos</li>
-                <li>Badges</li>
-                <li>Revives</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── SO FUNKTIONIERT'S ─────────────────────────────────── -->
-      <section class="section" id="how" aria-labelledby="how-heading">
-        <div class="container how-layout">
-          <div class="section-header section-header-left">
-            <span class="tag">Einstieg</span>
-            <h2 id="how-heading">In drei Schritten<br />ins nächste Duell</h2>
-            <p>
-              Kein Einrichten, kein Warten. Einfach App öffnen und losspielen.
-            </p>
-          </div>
-          <ol class="steps-list" role="list">
-            <li class="step">
-              <span class="step-number" aria-hidden="true">1</span>
-              <div class="step-body">
-                <h3>Modus wählen</h3>
-                <p>
-                  Duell, Liga, Turnier oder Marathon – such dir aus, worauf du
-                  Lust hast.
-                </p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step-number" aria-hidden="true">2</span>
-              <div class="step-body">
-                <h3>Run starten</h3>
-                <p>
-                  Schnell rein, keine lange Vorbereitung. Gegner wird
-                  automatisch gefunden.
-                </p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step-number" aria-hidden="true">3</span>
-              <div class="step-body">
-                <h3>Fragen beantworten</h3>
-                <p>
-                  Punkte sammeln, Ranking klettern und den nächsten Run starten.
-                </p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- ─── FEATURE-DETAILS ────────────────────────────────── -->
-
-      <section
-        class="section section-alt"
-        id="details"
-        aria-labelledby="details-heading"
-      >
-        <div class="container">
-          <div class="section-header">
-            <span class="tag">Details</span>
-            <h2 id="details-heading">Mehr unter der Haube</h2>
-            <p>
-              Features, die das Spiel taktisch und langfristig spannend halten.
-            </p>
-          </div>
-          <div class="details-grid">
-            <div class="detail-card">
-              <span class="detail-icon">⏱️</span>
-              <div>
-                <h3>Zeitbasierte Fragen</h3>
-                <p>
-                  Schnelle Entscheidungen, klare Punktevergabe – kein ewiges
-                  Grübeln.
-                </p>
-              </div>
-            </div>
-            <div class="detail-card">
-              <span class="detail-icon">🎖️</span>
-              <div>
-                <h3>Badges & Belohnungen</h3>
-                <p>
-                  Marathon‑Badges und regelmäßige Rewards für anhaltenden
-                  Fortschritt.
-                </p>
-              </div>
-            </div>
-            <div class="detail-card">
-              <span class="detail-icon">🃏</span>
-              <div>
-                <h3>Joker & Extras</h3>
-                <p>
-                  Joker‑Mechaniken für Liga und Marathon – taktisch einsetzbar,
-                  wenn's drauf ankommt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── DOWNLOAD CTA ──────────────────────────────────── -->
-      <section
-        class="section cta-section"
-        id="download"
-        aria-labelledby="cta-heading"
-      >
-        <div class="container cta-inner">
-          <div class="cta-copy">
-            <h2 id="cta-heading">Bereit für dein erstes Duell?</h2>
-            <p>
-              QuizBox ist kostenlos auf iOS und Android. Starte jetzt und
-              beweise, wer das bessere Allgemeinwissen hat.
-            </p>
-            <div class="store-row store-row-large">
-              <a class="store-btn store-btn-solid" href="#">
-                <span class="store-icon">&#63743;</span>
-                <span><small>Laden im</small> App Store</span>
-              </a>
-              <a class="store-btn store-btn-solid" href="#">
-                <span class="store-icon store-icon-gp">&#9654;</span>
-                <span><small>Jetzt bei</small> Google Play</span>
-              </a>
-            </div>
-          </div>
-          <div class="cta-glow" aria-hidden="true"></div>
-        </div>
-      </section>
     </main>
 
     <!-- ─── FOOTER ───────────────────────────────────────── -->

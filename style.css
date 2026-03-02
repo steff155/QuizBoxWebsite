@@ -34,18 +34,7 @@ html {
 
 body {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  background: var(--bg);
-  background-image:
-    radial-gradient(
-      ellipse 80% 50% at 50% -10%,
-      rgba(94, 234, 212, 0.11) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 60% 40% at 80% 80%,
-      rgba(245, 158, 11, 0.07) 0%,
-      transparent 50%
-    );
+  background: #000;
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -74,21 +63,19 @@ a {
 
 /* ─── Header ─────────────────────────────────────────────── */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(11, 15, 26, 0.85);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  position: static;
+  background: transparent;
+  border-bottom: none;
 }
 
 .header-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-block: 16px;
+  justify-content: center;
+  gap: 18px;
+  padding-block: 28px 12px;
+  text-align: center;
 }
 
 .brand {
@@ -98,8 +85,18 @@ a {
 }
 
 .brand-logo {
-  height: 38px;
+  height: 120px;
   width: auto;
+}
+
+.hero-tagline {
+  color: var(--accent);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .nav {
@@ -107,6 +104,7 @@ a {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav a {
@@ -149,15 +147,15 @@ a {
 
 .tag {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.4px;
   color: var(--accent);
-  background: rgba(94, 234, 212, 0.1);
-  border: 1px solid rgba(94, 234, 212, 0.25);
-  padding: 4px 12px;
-  border-radius: 999px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
   margin-bottom: 14px;
 }
 
@@ -210,6 +208,26 @@ a {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.store-badge:hover {
+  transform: translateY(-2px);
+}
+
+.store-badge img {
+  height: 54px;
+  width: auto;
+  display: block;
 }
 
 .store-btn {
@@ -280,8 +298,8 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 36px;
   align-items: center;
 }
 
@@ -290,6 +308,7 @@ a {
   line-height: 1.15;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .hero-sub {
@@ -297,6 +316,8 @@ a {
   font-size: 1.1rem;
   max-width: 520px;
   margin-bottom: 28px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .hero-actions {
@@ -304,20 +325,23 @@ a {
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 24px;
+  justify-content: center;
 }
 
 .hero-media {
-  background: linear-gradient(
-    135deg,
-    rgba(94, 234, 212, 0.08),
-    rgba(245, 158, 11, 0.1)
-  );
-  border-radius: 28px;
-  padding: 20px;
-  border: 1px solid rgba(94, 234, 212, 0.18);
-  box-shadow:
-    var(--shadow),
-    0 0 60px rgba(94, 234, 212, 0.07);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  max-width: 980px;
+  margin-inline: auto;
+  order: -1;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
 }
 
 /* ─── Sections ───────────────────────────────────────────── */
@@ -344,6 +368,7 @@ a {
 
 .section-header p {
   color: var(--muted);
+  font-size: 1.25rem;
 }
 
 .section-header-left {
@@ -363,6 +388,8 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 26px 22px;
+  position: relative;
+  overflow: hidden;
   transition:
     border-color 0.2s,
     transform 0.2s,
@@ -379,18 +406,76 @@ a {
   font-size: 1.8rem;
   display: block;
   margin-bottom: 12px;
+  width: 100%;
+  text-align: center;
 }
 
 .benefit-card h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .benefit-card p {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5;
+  text-align: center;
+}
+
+/* ─── Mode Gradients (App-Farben) ───────────────────────── */
+.benefit-card.mode-green,
+.benefit-card.mode-orange,
+.benefit-card.mode-pink,
+.benefit-card.mode-blue {
+  border: none;
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.benefit-card.mode-green h3,
+.benefit-card.mode-orange h3,
+.benefit-card.mode-pink h3,
+.benefit-card.mode-blue h3 {
+  color: #fff;
+}
+
+.benefit-card.mode-green p,
+.benefit-card.mode-orange p,
+.benefit-card.mode-pink p,
+.benefit-card.mode-blue p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.benefit-card.mode-green::after,
+.benefit-card.mode-orange::after,
+.benefit-card.mode-pink::after,
+.benefit-card.mode-blue::after {
+  content: attr(data-icon);
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  font-size: 6.5rem;
+  opacity: 0.18;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+
+.benefit-card.mode-green {
+  background: linear-gradient(135deg, #00c950 0%, #009966 100%);
+}
+
+.benefit-card.mode-orange {
+  background: linear-gradient(135deg, #f0b100 0%, #f54900 100%);
+}
+
+.benefit-card.mode-pink {
+  background: linear-gradient(135deg, #f6339a 0%, #ec003f 100%);
+}
+
+.benefit-card.mode-blue {
+  background: linear-gradient(135deg, #00b8db 0%, #155dfc 100%);
 }
 
 /* ─── Modes Grid ─────────────────────────────────────────── */
@@ -676,13 +761,9 @@ a {
 
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hero-media {
     order: -1;
-    max-width: 480px;
+    max-width: 100%;
     margin-inline: auto;
   }
 
@@ -697,12 +778,8 @@ a {
 }
 
 @media (max-width: 640px) {
-  .site-header {
-    position: static;
-  }
-
   .brand-logo {
-    height: 30px;
+    height: 80px;
   }
 
   .hero {
