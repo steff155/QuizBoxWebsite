@@ -8,43 +8,69 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <div class="brand">QuizBox</div>
-        <nav class="nav">
-          <a href="index.html">Start</a>
-          <a href="impressum.html">Impressum</a>
-        </nav>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="QuizBox – Startseite">
+          <img
+            src="assets/QuizBoxLogo_lang.png"
+            alt="QuizBox"
+            class="brand-logo"
+          />
+        </a>
       </div>
     </header>
 
     <main class="legal">
       <div class="container">
-        <h1>Datenschutzerklärung</h1>
-        <p>Diese Website ist eine statische Informationsseite. Es werden keine personenbezogenen Daten ohne deine ausdrückliche Einwilligung verarbeitet.</p>
+        <h1>Datenschutzerklärung (Website)</h1>
+        <p>Diese Datenschutzerklärung gilt ausschließlich für die <strong>Website</strong> von QuizBox. Die Datenschutzerklärung für die <strong>mobile App</strong> findest du <a class="legal-link" href="privacy-app.html">hier</a>.</p>
 
-        <h2>Verantwortliche Stelle</h2>
+        <h2>Verantwortlicher</h2>
         <div class="card">
-          <p><strong>Betreiber:</strong> Dein Name / Firmenname</p>
-          <p><strong>Adresse:</strong> Straße Hausnummer, PLZ Ort, Land</p>
-          <p><strong>Kontakt:</strong> E-Mail, Telefon (optional)</p>
+          <p><strong>Betreiber:</strong> SHK Media</p>
+          <p><strong>Inhaber:</strong> Stefan Kempter</p>
+          <p><strong>Adresse:</strong> Von‑Roggenstein‑Str. 23, 89358 Kammeltal, Deutschland</p>
+          <p><strong>Kontakt:</strong> shk-media@gmx.de</p>
         </div>
 
-        <h2>Server-Logs</h2>
-        <p>Beim Besuch der Website können durch den Hosting-Anbieter technische Zugriffsdaten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs) erfasst werden. Diese Daten dienen der Sicherheit und Stabilität des Angebots.</p>
+        <h2>Hosting</h2>
+        <p>Die Website wird über GitHub Pages (GitHub, Inc.) bereitgestellt. Beim Aufruf werden durch den Hosting‑Anbieter technische Zugriffsdaten (z. B. IP‑Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browser‑Informationen) verarbeitet. Das ist erforderlich, um die Website auszuliefern und die Sicherheit zu gewährleisten.</p>
+        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und stabilen Bereitstellung).</p>
+
+        <h2>Sprachauswahl (Browser‑Sprache)</h2>
+        <p>Beim Aufruf kann die vom Browser übermittelte Sprache ausgelesen werden, um dich auf die passende Sprachversion weiterzuleiten. Dabei werden keine Daten gespeichert.</p>
+        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (benutzerfreundliche Bereitstellung der Website).</p>
+
+        <h2>Keine Cookies und kein Tracking</h2>
+        <p>Diese Website setzt keine Cookies ein, verwendet kein Tracking und bindet keine externen Analyse‑ oder Marketing‑Dienste ein.</p>
+
+        <h2>Kontaktaufnahme</h2>
+        <p>Auf der Website gibt es kein Kontaktformular und keinen Newsletter.</p>
+
+        <h2>Datenschutzerklärung für die App</h2>
+        <p><em>Platzhalter: Der Datenschutzteil für die mobile QuizBox‑App wird hier ergänzt.</em></p>
 
         <h2>Deine Rechte</h2>
-        <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie das Recht auf Widerspruch.</p>
+        <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie das Recht auf Widerspruch. Außerdem kannst du dich bei einer Datenschutz‑Aufsichtsbehörde beschweren.</p>
+
       </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <span>© 2026 QuizBox</span>
-        <div class="footer-links">
-          <a href="index.html">Start</a>
-          <a href="impressum.html">Impressum</a>
-        </div>
+      <div class="container footer-inner">
+        <a class="brand" href="#top" aria-label="QuizBox – back to top">
+          <img
+            src="assets/QuizBoxLogo_lang.png"
+            alt="QuizBox"
+            class="brand-logo brand-logo-footer"
+          />
+        </a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="impressum.html">Imprint</a>
+          <a href="privacy.html">Privacy (Website)</a>
+          <a href="privacy-app.html">Privacy (App)</a>
+        </nav>
+        <p class="footer-note">© 2026 QuizBox. All rights reserved.</p>
       </div>
     </footer>
   </body>
