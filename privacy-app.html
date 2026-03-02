@@ -1,50 +1,272 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Datenschutz (App) – QuizBox</title>
-    <meta name="description" content="Datenschutzerklärung für die QuizBox App." />
+    <title>Privacy Policy (App) - QuizBox</title>
+    <meta name="description" content="Privacy policy for the QuizBox app." />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="QuizBox – Startseite">
+        <a class="brand" href="index.html" aria-label="QuizBox – home">
           <img
             src="assets/QuizBoxLogo_lang.png"
             alt="QuizBox"
             class="brand-logo"
           />
         </a>
+        <nav class="lang-switch" aria-label="Language selector">
+          <details class="lang-dropdown">
+            <summary class="lang-current">
+              <span>EN</span>
+            </summary>
+            <div class="lang-menu">
+              <a class="lang-link is-active" href="privacy-app.html?lang=en">EN</a>
+              <a class="lang-link" href="de/privacy-app.html?lang=de">DE</a>
+              <a class="lang-link" href="es/privacy-app.html?lang=es">ES</a>
+            </div>
+          </details>
+        </nav>
       </div>
     </header>
 
     <main class="legal">
       <div class="container">
-        <h1>Datenschutzerklärung (App)</h1>
+        <h1>Privacy Policy (App)</h1>
         <p>
-          Diese Datenschutzerklärung gilt ausschließlich für die <strong>mobile App</strong> von QuizBox. Die Datenschutzerklärung für die <strong>Website</strong> findest du <a class="legal-link" href="privacy.html">hier</a>.
+          This privacy policy applies exclusively to the <strong>mobile app</strong> of QuizBox. The privacy policy for the <strong>website</strong> can be found <a class="legal-link" href="privacy.html">here</a>.
         </p>
 
-        <h2>Verantwortlicher</h2>
+        <h2>Controller</h2>
         <div class="card">
-          <p><strong>Betreiber:</strong> SHK Media</p>
-          <p><strong>Inhaber:</strong> Stefan Kempter</p>
-          <p><strong>Adresse:</strong> Von‑Roggenstein‑Str. 23, 89358 Kammeltal, Deutschland</p>
-          <p><strong>Kontakt:</strong> shk-media@gmx.de</p>
+          <p><strong>Operator:</strong> SHK Media</p>
+          <p><strong>Owner:</strong> Stefan Kempter</p>
+          <p><strong>Address:</strong> Von-Roggenstein-Str. 23, 89358 Kammeltal, Germany</p>
+          <p><strong>Contact:</strong> shk-media@gmx.de</p>
         </div>
 
-        <h2>Platzhalter</h2>
+        <h2>Scope</h2>
         <p>
-          <em>Der Datenschutzteil für die mobile QuizBox‑App wird hier ergänzt.</em>
+          This privacy policy explains how we process personal data when you use the QuizBox app.
+          It applies to the app and the backend services we provide (e.g.&nbsp;game and user management).
         </p>
+
+        <h2>Overview: What data may be processed?</h2>
+        <p>Depending on how you use the app, we process in particular the following categories of data:</p>
+        <ul>
+          <li><strong>Account/login data:</strong> email address, username, internal user ID, login timestamps.</li>
+          <li><strong>Game and profile data:</strong> progress, points, statistics, league/tournament progress, friends list, in-app currency (e.g.&nbsp;coins/diamonds), settings.</li>
+          <li><strong>Usage/device data:</strong> technical identifiers (e.g.&nbsp;app instance ID), device and app information (e.g.&nbsp;operating system, app version), events/interactions in the app.</li>
+          <li><strong>Diagnostic and error data:</strong> crash/error reports and performance data (e.g.&nbsp;loading times), if enabled.</li>
+          <li><strong>Push data:</strong> device tokens (e.g.&nbsp;FCM/APNs), time and status of notifications.</li>
+          <li><strong>Feedback/support data:</strong> content you enter (e.g.&nbsp;message, category), optional email/name, device name and optionally a screenshot.</li>
+          <li><strong>Purchase/billing data:</strong> for in-app purchases, transaction/receipt data (no full payment data such as credit card numbers).</li>
+          <li><strong>Advertising/marketing data:</strong> if/when ad videos are integrated in the future, ad IDs (e.g.&nbsp;Android Advertising ID / iOS Identifier) and usage data may be processed (see section "Advertising / ad videos").</li>
+        </ul>
+
+        <h2>Purposes and legal bases (GDPR)</h2>
+        <p>We process personal data for the following purposes:</p>
+        <ul>
+          <li><strong>Provision of app functions</strong> (account, login, gameplay, matchmaking, leagues/tournaments, statistics, rewards, friends list) - Art.&nbsp;6(1)(b) GDPR (contract/pre-contract).</li>
+          <li><strong>Security, abuse and fraud prevention</strong> (e.g.&nbsp;technical logs, server logs) - Art.&nbsp;6(1)(f) GDPR (legitimate interest in secure operation).</li>
+          <li><strong>Error analysis and stability</strong> (crash/error reports, diagnostic data) - Art.&nbsp;6(1)(f) GDPR; where required also Art.&nbsp;6(1)(a) GDPR (consent).</li>
+          <li><strong>Usage analysis/product improvement</strong> (analytics/events) - generally Art.&nbsp;6(1)(a) GDPR (consent), where legally required.</li>
+          <li><strong>Push notifications</strong> (e.g.&nbsp;game updates) - generally Art.&nbsp;6(1)(a) GDPR (consent via operating system permission); technically necessary notifications may also be based on Art.&nbsp;6(1)(b)/(f) GDPR.</li>
+          <li><strong>Processing of in-app purchases</strong> (unlocking, purchase validation) - Art.&nbsp;6(1)(b) GDPR and Art.&nbsp;6(1)(c) GDPR (legal obligations, e.g.&nbsp;retention duties, where applicable).</li>
+          <li><strong>Support/feedback</strong> - Art.&nbsp;6(1)(b) GDPR (support within the use) or Art.&nbsp;6(1)(f) GDPR (legitimate interest in troubleshooting) or Art.&nbsp;6(1)(a) GDPR (if you voluntarily provide additional data, e.g.&nbsp;screenshot/email).</li>
+        </ul>
+
+        <h2>Account and login (AWS Cognito)</h2>
+        <p>
+          For registration/login we use <strong>AWS Cognito</strong> (Amazon Web Services). You can sign in via email/password
+          or - if enabled - via social login (e.g.&nbsp;Google/Facebook) through the Cognito "Hosted UI".
+          This processes in particular identification and login data (e.g.&nbsp;email, username, user ID).
+        </p>
+        <p>
+          We generally operate our AWS services in the region <strong>eu-central-1 (Frankfurt)</strong>.
+        </p>
+
+        <h2>Backend database (AWS DynamoDB) and game data</h2>
+        <p>
+          To provide the game functions, we store in <strong>AWS DynamoDB</strong> among other things profile and game data (e.g.&nbsp;username,
+          email, internal user ID, friends list, progress/statistics, league/tournament and reward information, wallet balances).
+        </p>
+        <p>
+          <strong>Visibility to other players:</strong> Depending on the function, other players can see your username and certain game/profile information
+          (e.g.&nbsp;avatar, status, league/statistics), for example in friends lists, opponent views or leaderboards. Which data is shown
+          depends on the app settings and the respective function.
+        </p>
+
+        <h2>Profile pictures / avatars (planned)</h2>
+        <p>
+          If we provide a profile picture feature and you upload a profile picture, we process the image (image file) and, if applicable, technical metadata
+          (e.g.&nbsp;upload time, file format/size). The profile picture may - depending on your settings - be visible to other players
+          (e.g.&nbsp;in friends lists, opponent views or leaderboards).
+        </p>
+        <p>
+          Please note: images may contain personal data (e.g.&nbsp;face, name tag) and possibly embedded metadata (e.g.&nbsp;EXIF).
+          We recommend not uploading sensitive information.
+        </p>
+
+        <h2>Server logs</h2>
+        <p>
+          When the app communicates with our servers, we process technically necessary connection data (e.g.&nbsp;IP address, date/time,
+          requested endpoints, device/browser identifiers such as "user agent"). This is required to provide the services, analyze errors
+          and ensure security.
+        </p>
+
+        <h2>Feedback (including optional screenshot upload)</h2>
+        <p>
+          If you send feedback via the app, we process the content you enter (e.g.&nbsp;message, topic) as well as context information
+          (e.g.&nbsp;affected screen, app version, device name). Optionally you can provide name/email.
+          In addition, the app - only as part of the feedback feature - can create a <strong>screenshot</strong> and upload it to an <strong>AWS S3</strong> bucket
+          so we can better understand your issue.
+        </p>
+
+        <h2>Push notifications (Firebase Cloud Messaging / APNs)</h2>
+        <p>
+          For push notifications we use <strong>Firebase Cloud Messaging (FCM)</strong>. On iOS, push messages are technically delivered via
+          the Apple Push Notification Service (APNs). A device token is processed to deliver messages to your device.
+          You can disable push notifications at any time in your device's system settings.
+        </p>
+
+        <h2>Analytics, stability and performance (Firebase &amp; Sentry)</h2>
+        <p>The app integrates the following services/SDKs:</p>
+        <ul>
+          <li><strong>Firebase Analytics</strong> (usage analysis, events, reach measurement).</li>
+          <li><strong>Firebase Crashlytics</strong> (crash/error reports).</li>
+          <li><strong>Firebase Performance Monitoring</strong> (performance metrics).</li>
+          <li><strong>Firebase Remote Config</strong> (configuration/feature flags).</li>
+          <li><strong>Firebase In-App Messaging</strong> (in-app notices/campaigns, typically based on analytics events).</li>
+          <li><strong>Sentry</strong> (error and diagnostic data for stabilization/troubleshooting).</li>
+        </ul>
+        <p>
+          Depending on the service, device/app information, technical identifiers, usage events as well as error/crash details
+          (e.g.&nbsp;stack traces) may be processed. Direct identification is generally not performed via names, but depending on the integration
+          it may be possible through linking with account/session information (e.g.&nbsp;in support cases).
+        </p>
+
+        <h2>App permissions</h2>
+        <p>
+          Depending on the platform and function, the app requires certain permissions. Typical examples are:
+          <strong>Internet</strong> (communication with our servers), <strong>Vibration</strong> (feedback/notifications) and, where applicable,
+          <strong>storage access</strong> (e.g.&nbsp;for feedback screenshots). Screenshots are created only when you actively use the feedback feature.
+          There is no access to your photo/media library unless you select/share content yourself. You can manage permissions in your
+          device's system settings.
+        </p>
+
+        <h2>In-app purchases</h2>
+        <p>
+          If you make in-app purchases, payment processing is handled by the respective app store provider (Apple App Store / Google Play).
+          We typically receive transaction information (e.g.&nbsp;product ID, time, confirmation/receipt data), but <strong>no</strong>
+          full payment data (e.g.&nbsp;credit card numbers). We may process transaction data to validate purchases and unlock content.
+        </p>
+
+        <h2>Advertising / ad videos (future)</h2>
+        <p>
+          <strong>Currently</strong>, no advertising SDKs are integrated in the app and no ads are delivered.
+          However, we plan to offer <strong>ad videos</strong> in the future (e.g.&nbsp;rewarded ads).
+          In that case, an ad network may process technical data (e.g.&nbsp;IP address, device identifiers, ad ID, interactions with ads).
+          Once a specific ad network is used, we will update this privacy policy accordingly.
+        </p>
+        <p>
+          Note: Personalized advertising and processing for marketing purposes require consent depending on the legal basis.
+          On iOS, "App Tracking Transparency" may also be required.
+        </p>
+
+        <h2>Recipients / processors</h2>
+        <p>Depending on the function, data may be transferred to the following categories of recipients:</p>
+        <ul>
+          <li><strong>Amazon Web Services (AWS)</strong> (Cognito, DynamoDB, S3; hosting/backend infrastructure).</li>
+          <li><strong>Google / Firebase</strong> (Analytics, Crashlytics, Performance, Remote Config, In-App Messaging, Cloud Messaging).</li>
+          <li><strong>Sentry</strong> (error/diagnostic reports).</li>
+          <li><strong>App store providers</strong> (Apple/Google) for download, billing and, if applicable, purchase validation.</li>
+          <li><strong>Advertising partners</strong> (future, depending on integration).</li>
+        </ul>
+        <p>Further information about providers (selection):</p>
+        <ul>
+          <li>
+            AWS Privacy: <a class="legal-link" href="https://aws.amazon.com/de/privacy/">https://aws.amazon.com/de/privacy/</a>
+          </li>
+          <li>
+            Firebase/Google Privacy: <a class="legal-link" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>
+          </li>
+          <li>
+            Sentry Privacy: <a class="legal-link" href="https://sentry.io/privacy/">https://sentry.io/privacy/</a>
+          </li>
+          <li>
+            Apple Privacy: <a class="legal-link" href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>
+          </li>
+          <li>
+            Google Privacy: <a class="legal-link" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+          </li>
+        </ul>
+
+        <h2>Data transfers to third countries</h2>
+        <p>
+          Depending on the provider used, processing may also take place in countries outside the EU/EEA (in particular the USA).
+          Where required, we base transfers on appropriate safeguards, in particular <strong>EU Standard Contractual Clauses (SCC)</strong> and/or -
+          where applicable - an <strong>adequacy decision</strong> (e.g.&nbsp;EU-U.S. Data Privacy Framework) for certified providers.
+        </p>
+
+        <h2>Retention period</h2>
+        <p>
+          We generally store personal data only as long as necessary for the purposes mentioned:
+          account and game data typically for the duration of your account; support/feedback data as long as necessary for processing.
+          Server logs are usually stored only for a short time for security reasons.
+        </p>
+
+        <h2>Local storage on the device</h2>
+        <p>
+          The app stores certain data locally to enable use (e.g.&nbsp;session/auth tokens and settings).
+          These data are usually stored in the device's secure storage. You can delete local data by logging out or uninstalling the app.
+        </p>
+
+        <h2>Your rights</h2>
+        <p>
+          You have the right of access, rectification, erasure, restriction of processing as well as the right to data portability (where applicable)
+          and the right to object. You can also lodge a complaint with a data protection supervisory authority.
+        </p>
+        <p>
+          If processing is based on your consent, you can withdraw it at any time with effect for the future.
+        </p>
+        <p>
+          For requests (e.g.&nbsp;access or deletion of your account) please contact us at <a class="legal-link" href="mailto:shk-media@gmx.de">shk-media@gmx.de</a>.
+        </p>
+
+        <h2>Account deletion</h2>
+        <p>
+          You can request the <strong>deletion of your account</strong> at any time. As soon as the function is available in the app, you will find it under
+          <strong>Settings > Account > Delete</strong>. Until then, please send us an email to <a class="legal-link" href="mailto:shk-media@gmx.de">shk-media@gmx.de</a>
+          (ideally with your username and the email address used in the app).
+        </p>
+        <p>
+          After successful verification, we delete or anonymize your account and profile data unless statutory retention obligations apply.
+          Data we must retain for legal reasons (e.g.&nbsp;billing/transaction records for in-app purchases, if any) are stored in accordance
+          with legal requirements and deleted afterwards.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          Our app is not specifically directed at children. If you believe we have processed children's data without the appropriate consent,
+          please contact us so we can review and, if necessary, delete the data.
+        </p>
+
+        <h2>Changes to this privacy policy</h2>
+        <p>
+          We update this privacy policy if legal requirements, app features or data processing change.
+          The current version is always available on this page.
+        </p>
+
+        <p><strong>Last updated:</strong> 02.03.2026</p>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand" href="#top" aria-label="QuizBox – back to top">
+        <a class="brand" href="#top" aria-label="QuizBox - back to top">
           <img
             src="assets/QuizBoxLogo_lang.png"
             alt="QuizBox"
@@ -56,7 +278,7 @@
           <a href="privacy.html">Privacy (Website)</a>
           <a href="privacy-app.html">Privacy (App)</a>
         </nav>
-        <p class="footer-note">© 2026 QuizBox. All rights reserved.</p>
+        <p class="footer-note">&copy; 2026 QuizBox. All rights reserved.</p>
       </div>
     </footer>
   </body>
