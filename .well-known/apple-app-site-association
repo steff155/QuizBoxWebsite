@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "LM8B4BU6JA.com.quizbox.app",
+        "paths": [
+          "/invite/*"
+        ]
+      }
+    ]
+  }
+}

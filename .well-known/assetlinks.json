@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quizbox.app",
+      "sha256_cert_fingerprints": [
+        "A9:A7:47:49:4F:85:6A:06:FF:4C:BD:1B:F7:B8:DB:AE:DC:4B:34:CC:49:AA:21:78:5A:7F:E7:59:6D:53:BC:31"
+      ]
+    }
+  }
+]
