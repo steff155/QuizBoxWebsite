@@ -65,7 +65,7 @@
           <li><strong>Push‑Daten:</strong> Geräte‑Token (z.&nbsp;B. FCM/APNs), Zeitpunkt und Status von Benachrichtigungen.</li>
           <li><strong>Feedback‑/Support‑Daten:</strong> von dir eingegebene Inhalte (z.&nbsp;B. Nachricht, Kategorie), optional E‑Mail/Name, Gerätebezeichnung sowie optional ein Screenshot.</li>
           <li><strong>Kauf‑/Abrechnungsdaten:</strong> bei In‑App‑Käufen Transaktions‑/Belegdaten (keine vollständigen Zahlungsdaten wie Kreditkartennummern).</li>
-          <li><strong>Werbe‑/Marketingdaten:</strong> falls/sofern künftig Werbevideos eingebunden werden, können Werbe‑IDs (z.&nbsp;B. Android Advertising ID / iOS Identifier) und Nutzungsdaten verarbeitet werden (siehe Abschnitt „Werbung/Werbevideos“).</li>
+          <li><strong>Werbe‑/Marketingdaten:</strong> IP‑Adresse, Geräte‑ und App‑Informationen, soweit zulässig Werbe‑IDs (z.&nbsp;B. Android Advertising ID oder Apples IDFA), Einwilligungsinformationen, Anzeigenaufrufe und ‑interaktionen sowie Diagnosedaten (siehe Abschnitt „Werbung und Belohnungsanzeigen“).</li>
         </ul>
 
         <h2>Zwecke und Rechtsgrundlagen (DSGVO)</h2>
@@ -78,6 +78,7 @@
           <li><strong>Push‑Benachrichtigungen</strong> (z.&nbsp;B. Spiel‑Updates) – i.&nbsp;d.&nbsp;R. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (Einwilligung über Betriebssystem‑Freigabe); technisch erforderliche Benachrichtigungen können auch Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b/f DSGVO stützen.</li>
           <li><strong>Abwicklung von In‑App‑Käufen</strong> (Freischaltungen, Validierung von Käufen) – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO sowie Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;c DSGVO (gesetzliche Pflichten, z.&nbsp;B. Nachweis‑/Aufbewahrungspflichten, sofern anwendbar).</li>
           <li><strong>Support/Feedback</strong> – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Support im Rahmen der Nutzung) bzw. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigtes Interesse an Fehlerbehebung) bzw. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (wenn du freiwillig zusätzliche Daten übermittelst, z.&nbsp;B. Screenshot/E‑Mail).</li>
+          <li><strong>Werbung, Anzeigenpersonalisierung und Erfolgsmessung</strong> – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (Einwilligung), soweit eine Einwilligung erforderlich ist. Der Zugriff auf oder die Speicherung von Informationen auf dem Endgerät erfolgt ebenfalls auf Grundlage einer Einwilligung, soweit gesetzlich erforderlich. Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</li>
         </ul>
 
         <h2>Account und Anmeldung (AWS Cognito)</h2>
@@ -166,16 +167,35 @@
           vollständigen Zahlungsdaten (z.&nbsp;B. Kreditkartennummern). Wir können Transaktionsdaten verarbeiten, um Käufe zu validieren und Inhalte freizuschalten.
         </p>
 
-        <h2>Werbung / Werbevideos (künftig)</h2>
+        <h2>Werbung und Belohnungsanzeigen (Google AdMob)</h2>
         <p>
-          <strong>Aktuell</strong> sind in der App keine Werbe‑SDKs eingebunden und es werden keine Werbeeinblendungen ausgeliefert.
-          Wir planen jedoch, künftig <strong>Werbevideos</strong> (z.&nbsp;B. „Rewarded Ads“/Belohnungswerbung) anzubieten.
-          Dabei kann ein Werbenetzwerk technische Daten (z.&nbsp;B. IP‑Adresse, Geräte‑Kennungen, Werbe‑ID, Interaktionen mit Anzeigen) verarbeiten.
-          Sobald ein konkretes Werbenetzwerk eingesetzt wird, ergänzen/aktualisieren wir diese Datenschutzerklärung entsprechend.
+          Wir nutzen <strong>Google AdMob</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) und das Google Mobile Ads SDK,
+          um freiwillige <strong>Belohnungsanzeigen („Rewarded Ads“)</strong> bereitzustellen. Du entscheidest selbst, ob du eine Anzeige startest.
+          Wenn du sie bis zu dem erforderlichen Zeitpunkt ansiehst, erhältst du die in der App angezeigte Belohnung.
+          Die App kann auch ohne das Starten einer Belohnungsanzeige genutzt werden; die damit verbundene optionale Belohnung wird dann nicht vergeben.
         </p>
         <p>
-          Hinweis: Personalisierte Werbung und die Verarbeitung zu Marketing‑Zwecken setzen – je nach Rechtslage – eine Einwilligung voraus.
-          Auf iOS kann hierfür zusätzlich die Abfrage über „App Tracking Transparency“ erforderlich sein.
+          Im Zusammenhang mit der Anzeigenauslieferung können Google und beteiligte Werbepartner insbesondere die IP‑Adresse, Geräte‑ und App‑Informationen,
+          den aus der IP‑Adresse abgeleiteten ungefähren Standort, soweit vorhanden und zulässig Werbe‑IDs, Einwilligungs‑ und Datenschutzsignale,
+          Anzeigenanfragen, Impressionen, Interaktionen, Belohnungsereignisse und Diagnosedaten verarbeiten. Abhängig von deinen Entscheidungen und den
+          verfügbaren Signalen können personalisierte, nicht personalisierte oder eingeschränkte Anzeigen ausgeliefert werden.
+          Die Verfügbarkeit einer Anzeige kann nicht garantiert werden.
+        </p>
+        <p>
+          Zur Abfrage und Speicherung gesetzlich erforderlicher Datenschutzentscheidungen verwenden wir Googles
+          <strong>User Messaging Platform (UMP)</strong>. Du kannst deine Auswahl für die Zukunft über die Datenschutzoptionen in den App‑Einstellungen
+          ändern oder widerrufen, soweit diese erforderlich und verfügbar sind. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.
+        </p>
+        <p>
+          Auf iOS verwenden wir, soweit anwendbar, zusätzlich Apples Abfrage zur <strong>App Tracking Transparency (ATT)</strong>.
+          Wenn du Tracking erlaubst, kann die Werbe‑ID für appübergreifende Anzeigenpersonalisierung und Erfolgsmessung verwendet werden.
+          Wenn du ablehnst, bleibt die App nutzbar und es können weiterhin Anzeigen ohne diese Erlaubnis erscheinen.
+        </p>
+        <p>
+          Weitere Informationen:
+          <a class="legal-link" href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>,
+          <a class="legal-link" href="https://policies.google.com/technologies/ads">Verwendung von Informationen für Werbung durch Google</a> und
+          <a class="legal-link" href="https://adssettings.google.com/">Google‑Einstellungen für Werbung</a>.
         </p>
 
         <h2>Empfänger / Auftragsverarbeiter</h2>
@@ -183,9 +203,9 @@
         <ul>
           <li><strong>Amazon Web Services (AWS)</strong> (Cognito, DynamoDB, S3; Hosting/Backend‑Infrastruktur).</li>
           <li><strong>Google / Firebase</strong> (Analytics, Crashlytics, Performance, Remote Config, In‑App Messaging, Cloud Messaging).</li>
+          <li><strong>Google AdMob / Google Mobile Ads und Werbepartner</strong> (Auslieferung, soweit zulässig Personalisierung, Erfolgsmessung und Betrugsprävention bei Belohnungsanzeigen).</li>
           <li><strong>Sentry</strong> (Fehler‑/Diagnoseberichte).</li>
           <li><strong>App‑Store‑Anbieter</strong> (Apple/Google) für Download, Abrechnung und ggf. Kaufvalidierung.</li>
-          <li><strong>Werbepartner</strong> (künftig, je nach Integration).</li>
         </ul>
         <p>Weitere Informationen zu den Anbietern (Auswahl):</p>
         <ul>
@@ -204,6 +224,9 @@
           <li>
             Google Datenschutz: <a class="legal-link" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
           </li>
+          <li>
+            Google Werbetechnologien: <a class="legal-link" href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
+          </li>
         </ul>
 
         <h2>Datenübermittlung in Drittländer</h2>
@@ -218,6 +241,8 @@
           Wir speichern personenbezogene Daten grundsätzlich nur so lange, wie es für die genannten Zwecke erforderlich ist:
           Account‑ und Spiel‑Daten typischerweise für die Dauer deines Accounts; Support‑/Feedback‑Daten solange für die Bearbeitung erforderlich.
           Server‑Logs werden aus Sicherheitsgründen in der Regel nur kurzfristig gespeichert.
+          Werbe‑ und Einwilligungsdaten werden von Google und beteiligten Partnern entsprechend deren eigenen Löschfristen und gesetzlichen Pflichten gespeichert.
+          Auf sämtliche dort verwendeten Speicherdauern haben wir keinen bestimmenden Einfluss.
         </p>
 
         <h2>Lokale Speicherung auf dem Gerät</h2>

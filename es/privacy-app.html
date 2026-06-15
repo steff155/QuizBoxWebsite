@@ -65,7 +65,7 @@
           <li><strong>Datos de notificaciones push:</strong> tokens de dispositivo (p.&nbsp;ej.&nbsp;FCM/APNs), momento y estado de las notificaciones.</li>
           <li><strong>Datos de feedback/soporte:</strong> contenidos que introduces (p.&nbsp;ej.&nbsp;mensaje, categoría), correo/nombre opcional, nombre del dispositivo y, opcionalmente, una captura de pantalla.</li>
           <li><strong>Datos de compra/facturación:</strong> en compras in-app, datos de transacción/recibo (sin datos de pago completos como números de tarjeta de crédito).</li>
-          <li><strong>Datos de publicidad/marketing:</strong> si en el futuro se integran videos publicitarios, pueden tratarse IDs de publicidad (p.&nbsp;ej.&nbsp;Android Advertising ID / iOS Identifier) y datos de uso (ver sección "Publicidad / videos publicitarios").</li>
+          <li><strong>Datos de publicidad/marketing:</strong> dirección IP, información del dispositivo y de la app, identificadores publicitarios cuando estén permitidos (p.&nbsp;ej.&nbsp;Android Advertising ID o IDFA de Apple), señales de consentimiento, impresiones e interacciones con anuncios y datos de diagnóstico (ver sección "Publicidad y anuncios con recompensa").</li>
         </ul>
 
         <h2>Finalidades y bases legales (RGPD)</h2>
@@ -78,6 +78,7 @@
           <li><strong>Notificaciones push</strong> (p.&nbsp;ej.&nbsp;actualizaciones del juego) – por lo general art.&nbsp;6.1.a RGPD (consentimiento a través del permiso del sistema operativo); las notificaciones técnicamente necesarias también pueden basarse en art.&nbsp;6.1.b/f RGPD.</li>
           <li><strong>Gestión de compras in-app</strong> (desbloqueos, validación de compras) – art.&nbsp;6.1.b RGPD y art.&nbsp;6.1.c RGPD (obligaciones legales, p.&nbsp;ej.&nbsp;de conservación, cuando proceda).</li>
           <li><strong>Soporte/feedback</strong> – art.&nbsp;6.1.b RGPD (soporte en el marco del uso) o art.&nbsp;6.1.f RGPD (interés legítimo en la resolución de errores) o art.&nbsp;6.1.a RGPD (cuando envías datos adicionales de forma voluntaria, p.&nbsp;ej.&nbsp;captura de pantalla/correo).</li>
+          <li><strong>Publicidad, personalización y medición de anuncios</strong> – art.&nbsp;6.1.a RGPD (consentimiento), cuando este sea necesario. El acceso o almacenamiento de información en el dispositivo también se basa en el consentimiento cuando lo exige la ley. Puedes retirar tu consentimiento en cualquier momento con efecto futuro.</li>
         </ul>
 
         <h2>Cuenta e inicio de sesión (AWS Cognito)</h2>
@@ -166,16 +167,35 @@
           datos de pago completos (p.&nbsp;ej.&nbsp;números de tarjeta de crédito). Podemos tratar los datos de transacción para validar compras y desbloquear contenido.
         </p>
 
-        <h2>Publicidad / videos publicitarios (futuro)</h2>
+        <h2>Publicidad y anuncios con recompensa (Google AdMob)</h2>
         <p>
-          <strong>Actualmente</strong> no se integran SDKs publicitarios en la app ni se muestran anuncios.
-          Sin embargo, planificamos ofrecer <strong>videos publicitarios</strong> en el futuro (p.&nbsp;ej.&nbsp;rewarded ads).
-          En ese caso, una red publicitaria puede tratar datos técnicos (p.&nbsp;ej.&nbsp;dirección IP, identificadores del dispositivo, ID de publicidad, interacciones con anuncios).
-          Cuando se utilice una red publicitaria concreta, actualizaremos esta política de privacidad en consecuencia.
+          Utilizamos <strong>Google AdMob</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlanda) y el SDK Google Mobile Ads para ofrecer
+          <strong>anuncios con recompensa</strong> voluntarios. Tú decides si quieres iniciar un anuncio. Si lo ves hasta el momento requerido,
+          recibes la recompensa indicada en la app. La app también puede utilizarse sin iniciar un anuncio con recompensa; en ese caso,
+          no se concede la recompensa opcional asociada.
         </p>
         <p>
-          Nota: La publicidad personalizada y el tratamiento con fines de marketing requieren consentimiento según la base legal aplicable.
-          En iOS, también puede ser necesario "App Tracking Transparency".
+          Para mostrar anuncios, Google y los socios publicitarios participantes pueden tratar, en particular, la dirección IP, información del dispositivo
+          y de la app, ubicación aproximada derivada de la dirección IP, identificadores publicitarios cuando estén disponibles y permitidos,
+          señales de consentimiento y privacidad, solicitudes, impresiones e interacciones con anuncios, eventos de recompensa y datos de diagnóstico.
+          Según tus decisiones y las señales disponibles, pueden mostrarse anuncios personalizados, no personalizados o limitados.
+          No se puede garantizar la disponibilidad de un anuncio.
+        </p>
+        <p>
+          Utilizamos la <strong>User Messaging Platform (UMP)</strong> de Google para solicitar y almacenar las decisiones de privacidad exigidas legalmente.
+          Puedes modificar o retirar tus decisiones para el futuro mediante las opciones de privacidad de los ajustes de la app, cuando sean necesarias
+          y estén disponibles. La retirada no afecta a la licitud del tratamiento realizado antes de ella.
+        </p>
+        <p>
+          En iOS utilizamos además, cuando corresponda, la solicitud de <strong>App Tracking Transparency (ATT)</strong> de Apple.
+          Si permites el seguimiento, el identificador publicitario puede utilizarse para personalizar y medir anuncios entre distintas apps.
+          Si lo rechazas, la app sigue siendo utilizable y aún pueden mostrarse anuncios sin este permiso.
+        </p>
+        <p>
+          Más información:
+          <a class="legal-link" href="https://policies.google.com/privacy">Política de privacidad de Google</a>,
+          <a class="legal-link" href="https://policies.google.com/technologies/ads">cómo utiliza Google la información para publicidad</a> y
+          <a class="legal-link" href="https://adssettings.google.com/">ajustes de anuncios de Google</a>.
         </p>
 
         <h2>Destinatarios / encargados del tratamiento</h2>
@@ -183,9 +203,9 @@
         <ul>
           <li><strong>Amazon Web Services (AWS)</strong> (Cognito, DynamoDB, S3; infraestructura de hosting/backend).</li>
           <li><strong>Google / Firebase</strong> (Analytics, Crashlytics, Performance, Remote Config, In-App Messaging, Cloud Messaging).</li>
+          <li><strong>Google AdMob / Google Mobile Ads y socios publicitarios</strong> (entrega, personalización cuando esté permitida, medición y prevención del fraude en anuncios con recompensa).</li>
           <li><strong>Sentry</strong> (informes de errores/diagnóstico).</li>
           <li><strong>Proveedores de tiendas de apps</strong> (Apple/Google) para descarga, facturación y, si procede, validación de compras.</li>
-          <li><strong>Socios publicitarios</strong> (futuro, según integración).</li>
         </ul>
         <p>Más información sobre los proveedores (selección):</p>
         <ul>
@@ -204,6 +224,9 @@
           <li>
             Privacidad de Google: <a class="legal-link" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
           </li>
+          <li>
+            Tecnologías publicitarias de Google: <a class="legal-link" href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
+          </li>
         </ul>
 
         <h2>Transferencias de datos a terceros países</h2>
@@ -218,6 +241,8 @@
           Por lo general, conservamos los datos personales solo durante el tiempo necesario para los fines mencionados:
           los datos de cuenta y juego, normalmente durante la duración de tu cuenta; los datos de soporte/feedback, mientras sea necesario para su gestión.
           Los logs del servidor suelen conservarse solo por un corto período por razones de seguridad.
+          Google y sus socios conservan los datos publicitarios y de consentimiento de acuerdo con sus propios plazos de conservación y obligaciones legales.
+          No determinamos todos los plazos de conservación utilizados por dichos proveedores.
         </p>
 
         <h2>Almacenamiento local en el dispositivo</h2>

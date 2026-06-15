@@ -65,7 +65,7 @@
           <li><strong>Push data:</strong> device tokens (e.g.&nbsp;FCM/APNs), time and status of notifications.</li>
           <li><strong>Feedback/support data:</strong> content you enter (e.g.&nbsp;message, category), optional email/name, device name and optionally a screenshot.</li>
           <li><strong>Purchase/billing data:</strong> for in-app purchases, transaction/receipt data (no full payment data such as credit card numbers).</li>
-          <li><strong>Advertising/marketing data:</strong> if/when ad videos are integrated in the future, ad IDs (e.g.&nbsp;Android Advertising ID / iOS Identifier) and usage data may be processed (see section "Advertising / ad videos").</li>
+          <li><strong>Advertising/marketing data:</strong> IP address, device and app information, advertising identifiers where permitted (e.g.&nbsp;Android Advertising ID or Apple's IDFA), consent signals, ad impressions and interactions, and diagnostic data (see section "Advertising and rewarded ads").</li>
         </ul>
 
         <h2>Purposes and legal bases (GDPR)</h2>
@@ -78,6 +78,7 @@
           <li><strong>Push notifications</strong> (e.g.&nbsp;game updates) - generally Art.&nbsp;6(1)(a) GDPR (consent via operating system permission); technically necessary notifications may also be based on Art.&nbsp;6(1)(b)/(f) GDPR.</li>
           <li><strong>Processing of in-app purchases</strong> (unlocking, purchase validation) - Art.&nbsp;6(1)(b) GDPR and Art.&nbsp;6(1)(c) GDPR (legal obligations, e.g.&nbsp;retention duties, where applicable).</li>
           <li><strong>Support/feedback</strong> - Art.&nbsp;6(1)(b) GDPR (support within the use) or Art.&nbsp;6(1)(f) GDPR (legitimate interest in troubleshooting) or Art.&nbsp;6(1)(a) GDPR (if you voluntarily provide additional data, e.g.&nbsp;screenshot/email).</li>
+          <li><strong>Advertising, ad personalization and measurement</strong> - Art.&nbsp;6(1)(a) GDPR (consent), where consent is required. Access to or storage of information on the device is also based on consent where legally required. You can withdraw your consent at any time with effect for the future.</li>
         </ul>
 
         <h2>Account and login (AWS Cognito)</h2>
@@ -166,16 +167,33 @@
           full payment data (e.g.&nbsp;credit card numbers). We may process transaction data to validate purchases and unlock content.
         </p>
 
-        <h2>Advertising / ad videos (future)</h2>
+        <h2>Advertising and rewarded ads (Google AdMob)</h2>
         <p>
-          <strong>Currently</strong>, no advertising SDKs are integrated in the app and no ads are delivered.
-          However, we plan to offer <strong>ad videos</strong> in the future (e.g.&nbsp;rewarded ads).
-          In that case, an ad network may process technical data (e.g.&nbsp;IP address, device identifiers, ad ID, interactions with ads).
-          Once a specific ad network is used, we will update this privacy policy accordingly.
+          We use <strong>Google AdMob</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland) and the Google Mobile Ads SDK to provide
+          voluntary <strong>rewarded ads</strong>. You decide whether to start an ad. If you watch it to the required point, you receive the reward shown in the app.
+          The app can also be used without starting a rewarded ad; in that case, the associated optional reward is not granted.
         </p>
         <p>
-          Note: Personalized advertising and processing for marketing purposes require consent depending on the legal basis.
-          On iOS, "App Tracking Transparency" may also be required.
+          In connection with ad delivery, Google and its advertising partners may process in particular the IP address, device and app information,
+          approximate location derived from the IP address, advertising identifiers where available and permitted, consent and privacy signals,
+          ad requests, impressions, interactions, reward events, and diagnostic data. Depending on your choices and the available signals,
+          personalized, non-personalized or limited ads may be delivered. Availability of an ad cannot be guaranteed.
+        </p>
+        <p>
+          We use Google's <strong>User Messaging Platform (UMP)</strong> to request and store legally required privacy choices.
+          You can change or withdraw your choices for the future through the privacy options in the app settings, where required and available.
+          Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal.
+        </p>
+        <p>
+          On iOS, we also use Apple's <strong>App Tracking Transparency (ATT)</strong> prompt where applicable. If you allow tracking,
+          the advertising identifier may be used for cross-app advertising personalization and measurement. If you decline, the app remains usable
+          and ads without this permission may still be shown.
+        </p>
+        <p>
+          Further information:
+          <a class="legal-link" href="https://policies.google.com/privacy">Google Privacy Policy</a>,
+          <a class="legal-link" href="https://policies.google.com/technologies/ads">How Google uses information for advertising</a> and
+          <a class="legal-link" href="https://adssettings.google.com/">Google Ads Settings</a>.
         </p>
 
         <h2>Recipients / processors</h2>
@@ -183,9 +201,9 @@
         <ul>
           <li><strong>Amazon Web Services (AWS)</strong> (Cognito, DynamoDB, S3; hosting/backend infrastructure).</li>
           <li><strong>Google / Firebase</strong> (Analytics, Crashlytics, Performance, Remote Config, In-App Messaging, Cloud Messaging).</li>
+          <li><strong>Google AdMob / Google Mobile Ads and advertising partners</strong> (delivery, personalization where permitted, measurement and fraud prevention for rewarded ads).</li>
           <li><strong>Sentry</strong> (error/diagnostic reports).</li>
           <li><strong>App store providers</strong> (Apple/Google) for download, billing and, if applicable, purchase validation.</li>
-          <li><strong>Advertising partners</strong> (future, depending on integration).</li>
         </ul>
         <p>Further information about providers (selection):</p>
         <ul>
@@ -204,6 +222,9 @@
           <li>
             Google Privacy: <a class="legal-link" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
           </li>
+          <li>
+            Google advertising technologies: <a class="legal-link" href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
+          </li>
         </ul>
 
         <h2>Data transfers to third countries</h2>
@@ -218,6 +239,8 @@
           We generally store personal data only as long as necessary for the purposes mentioned:
           account and game data typically for the duration of your account; support/feedback data as long as necessary for processing.
           Server logs are usually stored only for a short time for security reasons.
+          Advertising and consent data are retained by Google and its partners in accordance with their own retention policies and legal obligations.
+          We do not determine all retention periods used by those providers.
         </p>
 
         <h2>Local storage on the device</h2>
