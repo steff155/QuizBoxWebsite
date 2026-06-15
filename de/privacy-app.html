@@ -59,11 +59,10 @@
         <p>Je nach Nutzung verarbeiten wir insbesondere folgende Datenkategorien:</p>
         <ul>
           <li><strong>Account‑/Anmeldedaten:</strong> E‑Mail‑Adresse, Benutzername, interne Nutzer‑ID, Login‑Zeitpunkte.</li>
-          <li><strong>Spiel‑ und Profil‑Daten:</strong> Spielstände, Punkte, Statistiken, Liga‑/Turnier‑Fortschritt, Freundesliste, In‑App‑Währung (z.&nbsp;B. Coins/Diamonds), Einstellungen.</li>
+          <li><strong>Spiel‑ und Profil‑Daten:</strong> Spielstände, Punkte, Statistiken, Liga‑/Turnier‑Fortschritt, Freundesliste, In‑App‑Währung (z.&nbsp;B. Coins/Diamonds), Einstellungen sowie ein freiwillig hochgeladenes Profilbild/ein Avatar.</li>
           <li><strong>Nutzungs‑/Gerätedaten:</strong> technische Kennungen (z.&nbsp;B. App‑Instanz‑ID), Geräte‑ und App‑Informationen (z.&nbsp;B. Betriebssystem, App‑Version), Ereignisse/Interaktionen in der App.</li>
           <li><strong>Diagnose‑ und Fehlerdaten:</strong> Crash‑/Fehlerberichte und Performance‑Daten (z.&nbsp;B. Ladezeiten), soweit aktiviert.</li>
           <li><strong>Push‑Daten:</strong> Geräte‑Token (z.&nbsp;B. FCM/APNs), Zeitpunkt und Status von Benachrichtigungen.</li>
-          <li><strong>Feedback‑/Support‑Daten:</strong> von dir eingegebene Inhalte (z.&nbsp;B. Nachricht, Kategorie), optional E‑Mail/Name, Gerätebezeichnung sowie optional ein Screenshot.</li>
           <li><strong>Kauf‑/Abrechnungsdaten:</strong> bei In‑App‑Käufen Transaktions‑/Belegdaten (keine vollständigen Zahlungsdaten wie Kreditkartennummern).</li>
           <li><strong>Werbe‑/Marketingdaten:</strong> IP‑Adresse, Geräte‑ und App‑Informationen, soweit zulässig Werbe‑IDs (z.&nbsp;B. Android Advertising ID oder Apples IDFA), Einwilligungsinformationen, Anzeigenaufrufe und ‑interaktionen sowie Diagnosedaten (siehe Abschnitt „Werbung und Belohnungsanzeigen“).</li>
         </ul>
@@ -77,14 +76,13 @@
           <li><strong>Nutzungsanalyse/Produktverbesserung</strong> (Analytics/Events) – i.&nbsp;d.&nbsp;R. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (Einwilligung), soweit gesetzlich erforderlich.</li>
           <li><strong>Push‑Benachrichtigungen</strong> (z.&nbsp;B. Spiel‑Updates) – i.&nbsp;d.&nbsp;R. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (Einwilligung über Betriebssystem‑Freigabe); technisch erforderliche Benachrichtigungen können auch Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b/f DSGVO stützen.</li>
           <li><strong>Abwicklung von In‑App‑Käufen</strong> (Freischaltungen, Validierung von Käufen) – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO sowie Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;c DSGVO (gesetzliche Pflichten, z.&nbsp;B. Nachweis‑/Aufbewahrungspflichten, sofern anwendbar).</li>
-          <li><strong>Support/Feedback</strong> – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Support im Rahmen der Nutzung) bzw. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigtes Interesse an Fehlerbehebung) bzw. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (wenn du freiwillig zusätzliche Daten übermittelst, z.&nbsp;B. Screenshot/E‑Mail).</li>
           <li><strong>Werbung, Anzeigenpersonalisierung und Erfolgsmessung</strong> – Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO (Einwilligung), soweit eine Einwilligung erforderlich ist. Der Zugriff auf oder die Speicherung von Informationen auf dem Endgerät erfolgt ebenfalls auf Grundlage einer Einwilligung, soweit gesetzlich erforderlich. Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</li>
         </ul>
 
         <h2>Account und Anmeldung (AWS Cognito)</h2>
         <p>
-          Für Registrierung/Anmeldung nutzen wir <strong>AWS Cognito</strong> (Amazon Web Services). Du kannst dich per E‑Mail/Passwort anmelden
-          oder – sofern aktiviert – über Social Login (z.&nbsp;B. Google/Facebook) über die Cognito „Hosted UI“.
+          Für Registrierung/Anmeldung nutzen wir <strong>AWS Cognito</strong> (Amazon Web Services). Du kannst dich per E‑Mail/Passwort,
+          über Google oder über „Mit Apple anmelden“ anmelden.
           Dabei werden insbesondere Identifikations‑ und Anmeldedaten (z.&nbsp;B. E‑Mail, Benutzername, User‑ID) verarbeitet.
         </p>
         <p>
@@ -102,9 +100,9 @@
           hängt von den App‑Einstellungen und der jeweiligen Funktion ab.
         </p>
 
-        <h2>Profilbilder / Avatare (geplant)</h2>
+        <h2>Profilbilder / Avatare</h2>
         <p>
-          Wenn wir eine Profilbild‑Funktion bereitstellen und du ein Profilbild hochlädst, verarbeiten wir das Bild (Bilddatei) sowie ggf. technische Metadaten
+          Du kannst freiwillig ein eigenes Profilbild/einen Avatar hochladen. Dabei verarbeiten wir die Bilddatei sowie technische Metadaten
           (z.&nbsp;B. Upload‑Zeitpunkt, Dateiformat/Größe). Das Profilbild kann – abhängig von deinen Einstellungen – anderen Spielern angezeigt werden
           (z.&nbsp;B. in Freundeslisten, Gegner‑Ansichten oder Ranglisten).
         </p>
@@ -118,14 +116,6 @@
           Wenn die App mit unseren Servern kommuniziert, verarbeiten wir technisch notwendige Verbindungsdaten (z.&nbsp;B. IP‑Adresse, Datum/Uhrzeit,
           angefragte Endpunkte, Geräte‑/Browser‑Kennungen wie „User‑Agent“). Dies ist erforderlich, um die Dienste bereitzustellen, Fehler zu analysieren
           und die Sicherheit zu gewährleisten.
-        </p>
-
-        <h2>Feedback (inkl. optionalem Screenshot‑Upload)</h2>
-        <p>
-          Wenn du über die App Feedback sendest, verarbeiten wir die von dir eingegebenen Inhalte (z.&nbsp;B. Nachricht, Thema) sowie Kontextinformationen
-          (z.&nbsp;B. betroffener Screen, App‑Version, Gerätebezeichnung). Optional kannst du Name/E‑Mail übermitteln.
-          Zusätzlich kann die App – nur im Rahmen der Feedback‑Funktion – einen <strong>Screenshot</strong> erstellen und in einem <strong>AWS S3</strong>‑Bucket hochladen,
-          damit wir dein Anliegen besser nachvollziehen können.
         </p>
 
         <h2>Push‑Benachrichtigungen (Firebase Cloud Messaging / APNs)</h2>
@@ -154,9 +144,9 @@
         <h2>App‑Berechtigungen</h2>
         <p>
           Die App benötigt je nach Plattform und Funktion bestimmte Berechtigungen. Typische Beispiele sind:
-          <strong>Internet</strong> (Kommunikation mit unseren Servern), <strong>Vibration</strong> (Feedback/Benachrichtigungen) und ggf.
-          <strong>Speicherzugriff</strong> (z.&nbsp;B. für Feedback‑Screenshots). Screenshots werden dabei nur erstellt, wenn du die Feedback‑Funktion aktiv nutzt.
-          Ein Zugriff auf deine Foto‑/Medienbibliothek erfolgt nicht, sofern du nicht selbst Inhalte auswählst/teilst. Du kannst Berechtigungen in den
+          <strong>Internet</strong> (Kommunikation mit unseren Servern), <strong>Vibration</strong> (Spiel‑Feedback/Benachrichtigungen) und ggf.
+          Zugriff auf Fotos/Medien, wenn du freiwillig ein eigenes Profilbild auswählst. Ein Zugriff auf deine Foto‑/Medienbibliothek erfolgt nicht,
+          sofern du nicht selbst ein Bild auswählst. Du kannst Berechtigungen in den
           System‑Einstellungen deines Geräts verwalten.
         </p>
 
@@ -239,7 +229,7 @@
         <h2>Speicherdauer</h2>
         <p>
           Wir speichern personenbezogene Daten grundsätzlich nur so lange, wie es für die genannten Zwecke erforderlich ist:
-          Account‑ und Spiel‑Daten typischerweise für die Dauer deines Accounts; Support‑/Feedback‑Daten solange für die Bearbeitung erforderlich.
+          Account‑ und Spiel‑Daten typischerweise für die Dauer deines Accounts.
           Server‑Logs werden aus Sicherheitsgründen in der Regel nur kurzfristig gespeichert.
           Werbe‑ und Einwilligungsdaten werden von Google und beteiligten Partnern entsprechend deren eigenen Löschfristen und gesetzlichen Pflichten gespeichert.
           Auf sämtliche dort verwendeten Speicherdauern haben wir keinen bestimmenden Einfluss.
@@ -265,12 +255,12 @@
 
         <h2>Account‑Löschung</h2>
         <p>
-          Du kannst die <strong>Löschung deines Accounts</strong> jederzeit beantragen. Sobald die Funktion in der App verfügbar ist, findest du sie unter
-          <strong>Einstellungen → Account → Löschen</strong>. Bis dahin sende uns bitte eine E‑Mail an <a class="legal-link" href="mailto:shk-media@gmx.de">shk-media@gmx.de</a>
-          (idealerweise mit deinem Benutzernamen und der in der App verwendeten E‑Mail‑Adresse).
+          Du kannst deinen <strong>Account</strong> jederzeit direkt in der App unter
+          <strong>Einstellungen → Account → Account löschen</strong> löschen.
         </p>
         <p>
-          Nach erfolgreicher Prüfung löschen oder anonymisieren wir deine Account‑ und Profil‑Daten, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          Bei der Löschung werden die bei QuizBox gespeicherten accountbezogenen Daten einschließlich Account‑, Profil‑ und Spiel‑Daten
+          gelöscht oder anonymisiert, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
           Daten, die wir aus rechtlichen Gründen aufbewahren müssen (z.&nbsp;B. Abrechnungs‑/Transaktionsnachweise bei In‑App‑Käufen, sofern vorhanden), werden entsprechend
           der gesetzlichen Vorgaben gespeichert und danach gelöscht.
         </p>

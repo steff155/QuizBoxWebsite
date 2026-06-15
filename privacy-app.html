@@ -59,11 +59,10 @@
         <p>Depending on how you use the app, we process in particular the following categories of data:</p>
         <ul>
           <li><strong>Account/login data:</strong> email address, username, internal user ID, login timestamps.</li>
-          <li><strong>Game and profile data:</strong> progress, points, statistics, league/tournament progress, friends list, in-app currency (e.g.&nbsp;coins/diamonds), settings.</li>
+          <li><strong>Game and profile data:</strong> progress, points, statistics, league/tournament progress, friends list, in-app currency (e.g.&nbsp;coins/diamonds), settings and, if voluntarily uploaded, a profile picture/avatar.</li>
           <li><strong>Usage/device data:</strong> technical identifiers (e.g.&nbsp;app instance ID), device and app information (e.g.&nbsp;operating system, app version), events/interactions in the app.</li>
           <li><strong>Diagnostic and error data:</strong> crash/error reports and performance data (e.g.&nbsp;loading times), if enabled.</li>
           <li><strong>Push data:</strong> device tokens (e.g.&nbsp;FCM/APNs), time and status of notifications.</li>
-          <li><strong>Feedback/support data:</strong> content you enter (e.g.&nbsp;message, category), optional email/name, device name and optionally a screenshot.</li>
           <li><strong>Purchase/billing data:</strong> for in-app purchases, transaction/receipt data (no full payment data such as credit card numbers).</li>
           <li><strong>Advertising/marketing data:</strong> IP address, device and app information, advertising identifiers where permitted (e.g.&nbsp;Android Advertising ID or Apple's IDFA), consent signals, ad impressions and interactions, and diagnostic data (see section "Advertising and rewarded ads").</li>
         </ul>
@@ -77,14 +76,13 @@
           <li><strong>Usage analysis/product improvement</strong> (analytics/events) - generally Art.&nbsp;6(1)(a) GDPR (consent), where legally required.</li>
           <li><strong>Push notifications</strong> (e.g.&nbsp;game updates) - generally Art.&nbsp;6(1)(a) GDPR (consent via operating system permission); technically necessary notifications may also be based on Art.&nbsp;6(1)(b)/(f) GDPR.</li>
           <li><strong>Processing of in-app purchases</strong> (unlocking, purchase validation) - Art.&nbsp;6(1)(b) GDPR and Art.&nbsp;6(1)(c) GDPR (legal obligations, e.g.&nbsp;retention duties, where applicable).</li>
-          <li><strong>Support/feedback</strong> - Art.&nbsp;6(1)(b) GDPR (support within the use) or Art.&nbsp;6(1)(f) GDPR (legitimate interest in troubleshooting) or Art.&nbsp;6(1)(a) GDPR (if you voluntarily provide additional data, e.g.&nbsp;screenshot/email).</li>
           <li><strong>Advertising, ad personalization and measurement</strong> - Art.&nbsp;6(1)(a) GDPR (consent), where consent is required. Access to or storage of information on the device is also based on consent where legally required. You can withdraw your consent at any time with effect for the future.</li>
         </ul>
 
         <h2>Account and login (AWS Cognito)</h2>
         <p>
-          For registration/login we use <strong>AWS Cognito</strong> (Amazon Web Services). You can sign in via email/password
-          or - if enabled - via social login (e.g.&nbsp;Google/Facebook) through the Cognito "Hosted UI".
+          For registration/login we use <strong>AWS Cognito</strong> (Amazon Web Services). You can sign in via email/password,
+          Google Sign-In or Sign in with Apple.
           This processes in particular identification and login data (e.g.&nbsp;email, username, user ID).
         </p>
         <p>
@@ -102,9 +100,9 @@
           depends on the app settings and the respective function.
         </p>
 
-        <h2>Profile pictures / avatars (planned)</h2>
+        <h2>Profile pictures / avatars</h2>
         <p>
-          If we provide a profile picture feature and you upload a profile picture, we process the image (image file) and, if applicable, technical metadata
+          You can voluntarily upload your own profile picture/avatar. We process the image file and technical metadata
           (e.g.&nbsp;upload time, file format/size). The profile picture may - depending on your settings - be visible to other players
           (e.g.&nbsp;in friends lists, opponent views or leaderboards).
         </p>
@@ -118,14 +116,6 @@
           When the app communicates with our servers, we process technically necessary connection data (e.g.&nbsp;IP address, date/time,
           requested endpoints, device/browser identifiers such as "user agent"). This is required to provide the services, analyze errors
           and ensure security.
-        </p>
-
-        <h2>Feedback (including optional screenshot upload)</h2>
-        <p>
-          If you send feedback via the app, we process the content you enter (e.g.&nbsp;message, topic) as well as context information
-          (e.g.&nbsp;affected screen, app version, device name). Optionally you can provide name/email.
-          In addition, the app - only as part of the feedback feature - can create a <strong>screenshot</strong> and upload it to an <strong>AWS S3</strong> bucket
-          so we can better understand your issue.
         </p>
 
         <h2>Push notifications (Firebase Cloud Messaging / APNs)</h2>
@@ -154,9 +144,9 @@
         <h2>App permissions</h2>
         <p>
           Depending on the platform and function, the app requires certain permissions. Typical examples are:
-          <strong>Internet</strong> (communication with our servers), <strong>Vibration</strong> (feedback/notifications) and, where applicable,
-          <strong>storage access</strong> (e.g.&nbsp;for feedback screenshots). Screenshots are created only when you actively use the feedback feature.
-          There is no access to your photo/media library unless you select/share content yourself. You can manage permissions in your
+          <strong>Internet</strong> (communication with our servers), <strong>Vibration</strong> (game feedback/notifications) and, where applicable,
+          access to photos/media when you voluntarily select your own profile picture. There is no access to your photo/media library unless
+          you select content yourself. You can manage permissions in your
           device's system settings.
         </p>
 
@@ -237,7 +227,7 @@
         <h2>Retention period</h2>
         <p>
           We generally store personal data only as long as necessary for the purposes mentioned:
-          account and game data typically for the duration of your account; support/feedback data as long as necessary for processing.
+          account and game data typically for the duration of your account.
           Server logs are usually stored only for a short time for security reasons.
           Advertising and consent data are retained by Google and its partners in accordance with their own retention policies and legal obligations.
           We do not determine all retention periods used by those providers.
@@ -263,12 +253,12 @@
 
         <h2>Account deletion</h2>
         <p>
-          You can request the <strong>deletion of your account</strong> at any time. As soon as the function is available in the app, you will find it under
-          <strong>Settings > Account > Delete</strong>. Until then, please send us an email to <a class="legal-link" href="mailto:shk-media@gmx.de">shk-media@gmx.de</a>
-          (ideally with your username and the email address used in the app).
+          You can delete your <strong>account</strong> at any time in the app under
+          <strong>Settings > Account > Delete account</strong>.
         </p>
         <p>
-          After successful verification, we delete or anonymize your account and profile data unless statutory retention obligations apply.
+          The deletion removes or anonymizes the account-related data held by QuizBox, including account, profile and game data,
+          unless statutory retention obligations apply.
           Data we must retain for legal reasons (e.g.&nbsp;billing/transaction records for in-app purchases, if any) are stored in accordance
           with legal requirements and deleted afterwards.
         </p>

@@ -59,11 +59,10 @@
         <p>Según el uso, tratamos en particular las siguientes categorías de datos:</p>
         <ul>
           <li><strong>Datos de cuenta/inicio de sesión:</strong> dirección de correo electrónico, nombre de usuario, ID de usuario interno, momentos de inicio de sesión.</li>
-          <li><strong>Datos de juego y perfil:</strong> progreso, puntos, estadísticas, progreso en liga/torneo, lista de amigos, moneda in-app (p.&nbsp;ej.&nbsp;monedas/diamantes), ajustes.</li>
+          <li><strong>Datos de juego y perfil:</strong> progreso, puntos, estadísticas, progreso en liga/torneo, lista de amigos, moneda in-app (p.&nbsp;ej.&nbsp;monedas/diamantes), ajustes y, si se sube voluntariamente, una foto de perfil/avatar.</li>
           <li><strong>Datos de uso/dispositivo:</strong> identificadores técnicos (p.&nbsp;ej.&nbsp;ID de instancia de la app), información del dispositivo y de la app (p.&nbsp;ej.&nbsp;sistema operativo, versión de la app), eventos/interacciones en la app.</li>
           <li><strong>Datos de diagnóstico y errores:</strong> informes de fallos/errores y datos de rendimiento (p.&nbsp;ej.&nbsp;tiempos de carga), si está activado.</li>
           <li><strong>Datos de notificaciones push:</strong> tokens de dispositivo (p.&nbsp;ej.&nbsp;FCM/APNs), momento y estado de las notificaciones.</li>
-          <li><strong>Datos de feedback/soporte:</strong> contenidos que introduces (p.&nbsp;ej.&nbsp;mensaje, categoría), correo/nombre opcional, nombre del dispositivo y, opcionalmente, una captura de pantalla.</li>
           <li><strong>Datos de compra/facturación:</strong> en compras in-app, datos de transacción/recibo (sin datos de pago completos como números de tarjeta de crédito).</li>
           <li><strong>Datos de publicidad/marketing:</strong> dirección IP, información del dispositivo y de la app, identificadores publicitarios cuando estén permitidos (p.&nbsp;ej.&nbsp;Android Advertising ID o IDFA de Apple), señales de consentimiento, impresiones e interacciones con anuncios y datos de diagnóstico (ver sección "Publicidad y anuncios con recompensa").</li>
         </ul>
@@ -77,14 +76,13 @@
           <li><strong>Análisis de uso/mejora del producto</strong> (analytics/eventos) – por lo general art.&nbsp;6.1.a RGPD (consentimiento), cuando sea legalmente requerido.</li>
           <li><strong>Notificaciones push</strong> (p.&nbsp;ej.&nbsp;actualizaciones del juego) – por lo general art.&nbsp;6.1.a RGPD (consentimiento a través del permiso del sistema operativo); las notificaciones técnicamente necesarias también pueden basarse en art.&nbsp;6.1.b/f RGPD.</li>
           <li><strong>Gestión de compras in-app</strong> (desbloqueos, validación de compras) – art.&nbsp;6.1.b RGPD y art.&nbsp;6.1.c RGPD (obligaciones legales, p.&nbsp;ej.&nbsp;de conservación, cuando proceda).</li>
-          <li><strong>Soporte/feedback</strong> – art.&nbsp;6.1.b RGPD (soporte en el marco del uso) o art.&nbsp;6.1.f RGPD (interés legítimo en la resolución de errores) o art.&nbsp;6.1.a RGPD (cuando envías datos adicionales de forma voluntaria, p.&nbsp;ej.&nbsp;captura de pantalla/correo).</li>
           <li><strong>Publicidad, personalización y medición de anuncios</strong> – art.&nbsp;6.1.a RGPD (consentimiento), cuando este sea necesario. El acceso o almacenamiento de información en el dispositivo también se basa en el consentimiento cuando lo exige la ley. Puedes retirar tu consentimiento en cualquier momento con efecto futuro.</li>
         </ul>
 
         <h2>Cuenta e inicio de sesión (AWS Cognito)</h2>
         <p>
-          Para el registro/inicio de sesión utilizamos <strong>AWS Cognito</strong> (Amazon Web Services). Puedes iniciar sesión con correo/contraseña
-          o, si está habilitado, mediante inicio de sesión social (p.&nbsp;ej.&nbsp;Google/Facebook) a través de la "Hosted UI" de Cognito.
+          Para el registro/inicio de sesión utilizamos <strong>AWS Cognito</strong> (Amazon Web Services). Puedes iniciar sesión con correo/contraseña,
+          con Google o con “Iniciar sesión con Apple”.
           En este proceso se tratan especialmente datos de identificación y de inicio de sesión (p.&nbsp;ej.&nbsp;correo electrónico, nombre de usuario, ID de usuario).
         </p>
         <p>
@@ -102,9 +100,9 @@
           depende de los ajustes de la app y de la función correspondiente.
         </p>
 
-        <h2>Fotos de perfil / avatares (previsto)</h2>
+        <h2>Fotos de perfil / avatares</h2>
         <p>
-          Si proporcionamos una función de foto de perfil y subes una foto, tratamos la imagen (archivo de imagen) y, si procede, metadatos técnicos
+          Puedes subir voluntariamente tu propia foto de perfil/avatar. Tratamos el archivo de imagen y metadatos técnicos
           (p.&nbsp;ej.&nbsp;momento de subida, formato/tamaño). La foto de perfil puede, en función de tus ajustes, ser visible para otros jugadores
           (p.&nbsp;ej.&nbsp;en listas de amigos, vistas de oponentes o clasificaciones).
         </p>
@@ -118,14 +116,6 @@
           Cuando la app se comunica con nuestros servidores, tratamos datos de conexión técnicamente necesarios (p.&nbsp;ej.&nbsp;dirección IP, fecha/hora,
           endpoints solicitados, identificadores de dispositivo/navegador como "user agent"). Esto es necesario para prestar los servicios, analizar errores
           y garantizar la seguridad.
-        </p>
-
-        <h2>Feedback (incluida la subida opcional de captura de pantalla)</h2>
-        <p>
-          Si envías feedback desde la app, tratamos los contenidos que introduces (p.&nbsp;ej.&nbsp;mensaje, tema), así como información de contexto
-          (p.&nbsp;ej.&nbsp;pantalla afectada, versión de la app, nombre del dispositivo). Opcionalmente puedes indicar nombre/correo.
-          Además, la app, únicamente como parte de la función de feedback, puede crear una <strong>captura de pantalla</strong> y subirla a un bucket de <strong>AWS S3</strong>
-          para que podamos comprender mejor tu incidencia.
         </p>
 
         <h2>Notificaciones push (Firebase Cloud Messaging / APNs)</h2>
@@ -154,9 +144,9 @@
         <h2>Permisos de la app</h2>
         <p>
           Según la plataforma y la función, la app requiere determinados permisos. Ejemplos típicos son:
-          <strong>Internet</strong> (comunicación con nuestros servidores), <strong>Vibración</strong> (feedback/notificaciones) y, si procede,
-          <strong>acceso al almacenamiento</strong> (p.&nbsp;ej.&nbsp;para capturas en feedback). Las capturas se crean solo cuando utilizas activamente la función de feedback.
-          No hay acceso a tu biblioteca de fotos/medios salvo que selecciones o compartas contenido tú mismo. Puedes gestionar los permisos en los
+          <strong>Internet</strong> (comunicación con nuestros servidores), <strong>Vibración</strong> (respuesta del juego/notificaciones) y, si procede,
+          acceso a fotos/medios cuando seleccionas voluntariamente tu propia foto de perfil. No hay acceso a tu biblioteca de fotos/medios
+          salvo que selecciones una imagen tú mismo. Puedes gestionar los permisos en los
           ajustes del sistema de tu dispositivo.
         </p>
 
@@ -239,7 +229,7 @@
         <h2>Plazo de conservación</h2>
         <p>
           Por lo general, conservamos los datos personales solo durante el tiempo necesario para los fines mencionados:
-          los datos de cuenta y juego, normalmente durante la duración de tu cuenta; los datos de soporte/feedback, mientras sea necesario para su gestión.
+          los datos de cuenta y juego, normalmente durante la duración de tu cuenta.
           Los logs del servidor suelen conservarse solo por un corto período por razones de seguridad.
           Google y sus socios conservan los datos publicitarios y de consentimiento de acuerdo con sus propios plazos de conservación y obligaciones legales.
           No determinamos todos los plazos de conservación utilizados por dichos proveedores.
@@ -265,12 +255,12 @@
 
         <h2>Eliminación de cuenta</h2>
         <p>
-          Puedes solicitar la <strong>eliminación de tu cuenta</strong> en cualquier momento. En cuanto la función esté disponible en la app, la encontrarás en
-          <strong>Ajustes > Cuenta > Eliminar</strong>. Hasta entonces, envíanos un correo a <a class="legal-link" href="mailto:shk-media@gmx.de">shk-media@gmx.de</a>
-          (idealmente con tu nombre de usuario y la dirección de correo utilizada en la app).
+          Puedes eliminar tu <strong>cuenta</strong> en cualquier momento directamente en la app, en
+          <strong>Ajustes > Cuenta > Eliminar cuenta</strong>.
         </p>
         <p>
-          Tras la verificación, eliminamos o anonimizamos tus datos de cuenta y perfil, salvo que existan obligaciones legales de conservación.
+          Al eliminarla, se suprimen o anonimizan los datos vinculados a la cuenta almacenados por QuizBox, incluidos los datos de cuenta,
+          perfil y juego, salvo que existan obligaciones legales de conservación.
           Los datos que debamos conservar por motivos legales (p.&nbsp;ej.&nbsp;justificantes de facturación/transacción en compras in-app, si los hubiera)
           se guardan conforme a los requisitos legales y se eliminan posteriormente.
         </p>
