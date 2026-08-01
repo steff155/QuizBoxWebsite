@@ -91,9 +91,10 @@ a {
 
 .hero-tagline {
   color: var(--accent);
-  font-size: 1.55rem;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 600;
-  letter-spacing: 0.4px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin-top: 16px;
   margin-bottom: 12px;
   text-align: center;
@@ -228,6 +229,10 @@ a {
   height: 54px;
   width: auto;
   display: block;
+}
+
+.hero .store-badge img {
+  height: 72px;
 }
 
 .store-btn {
